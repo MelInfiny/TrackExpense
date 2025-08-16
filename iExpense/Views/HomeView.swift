@@ -9,9 +9,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    // Source de vérité locale pour l'instant.
-    // Si vous souhaitez partager l'état entre plusieurs écrans,
-    // passez `expenses` en paramètre avec @Bindable.
     @State private var expenses = Expenses()
     @State private var showingAddExpense = false
     @State private var filter: Filter = .all
@@ -23,7 +20,6 @@ struct HomeView: View {
         var id: String { rawValue }
     }
 
-    // Items filtrés selon le segment sélectionné
     private var filteredItems: [ExpenseItem] {
         switch filter {
         case .all: return expenses.items
@@ -39,7 +35,6 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Fond gradient issu de Theme
                 Theme.Gradients.lightBlue
                     .ignoresSafeArea()
 
@@ -66,7 +61,7 @@ struct HomeView: View {
                             ForEach(filteredItems) { item in
                                 ExpenseRow(item: item)
                                     .listRowSeparator(.visible)
-                                    .listRowBackground(Color.clear) // blanc translucide
+                                    .listRowBackground(Color.clear)
                             }
                             .onDelete(perform: removeItems)
                         }
@@ -135,7 +130,6 @@ struct HomeView: View {
     // MARK: - Actions
 
     private func removeItems(at offsets: IndexSet) {
-        // Nous supprimons à partir de la source non filtrée pour éviter les décalages.
         let idsToDelete = offsets.map { filteredItems[$0].id }
         expenses.items.removeAll { idsToDelete.contains($0.id) }
     }
@@ -178,6 +172,13 @@ private struct ExpenseRow: View {
         default: return raw
         }
     }
+}
+
+struct ExpenseItem: Identifiable, Codable {
+    var id = UUID()
+    let name: String
+    let type: String
+    let amount: Double
 }
 
 #Preview {

@@ -1,4 +1,4 @@
-//  AddExpenseView.swift — refonte
+//  AddExpenseView.swift
 //  iExpense
 //
 //  Objectifs:
@@ -29,8 +29,9 @@ struct AddView: View {
     private var isAmountValid: Bool { cents > 0 }
     private var formIsValid: Bool { isNameValid && isAmountValid }
 
+    // Popup
     @State private var showConfirm = false
-    @State private var confirmCategory: String = "Personal" // stocke la sélection du popup
+    @State private var confirmCategory: String = "Personal"
 
     var body: some View {
         NavigationStack {
@@ -111,7 +112,6 @@ struct AddView: View {
                 .padding(.horizontal, 14)
                 .frame(height: 54)
                 .background(
-                    // un peu plus contrasté que HomeView
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
                         .fill(Color.white.opacity(0.28))
                         .overlay(
@@ -172,7 +172,6 @@ struct AddView: View {
 
     private var amountPad: some View {
         VStack(spacing: 16) {
-            // Affichage du montant au centre, dans un seul conteneur
             VStack(spacing: 6) {
                 Text("Montant")
                     .font(.callout)
@@ -187,7 +186,7 @@ struct AddView: View {
             .padding(.vertical, 18)
             .background(
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(Color.white.opacity(0.28)) // plus contrasté que HomeView
+                    .fill(Color.white.opacity(0.28))
                     .overlay(
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
                             .strokeBorder(Color.white.opacity(0.35), lineWidth: 1)

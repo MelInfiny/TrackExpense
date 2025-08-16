@@ -4,8 +4,6 @@
 //  Popup de confirmation après tentative d'enregistrement
 //  - Récap nom + montant
 //  - Sélecteur catégorie (menu déroulant)
-//  - Boutons OK / X
-//  - Fond blanc, texte noir, centré ~1/3 de l'écran
 
 import SwiftUI
 
@@ -15,7 +13,7 @@ struct AddExpenseConfirmationView: View {
     let name: String
     let amount: Double
 
-    @Binding var category: String // "Personal" ou "Business"
+    @Binding var category: String
 
     var onConfirm: () -> Void
 
@@ -71,7 +69,7 @@ struct AddExpenseConfirmationView: View {
                                                     .foregroundColor(.black.opacity(0.7))
                             }
                             .padding(.horizontal, 12)
-                            .contentShape(Rectangle()) // rend toute la zone tappable
+                            .contentShape(Rectangle()) 
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.25, dampingFraction: 0.85)) {
                                     category = (category == "Business") ? "Personal" : "Business"

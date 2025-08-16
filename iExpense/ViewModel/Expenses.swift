@@ -2,8 +2,6 @@
 //  Expense.swift
 //  iExpense
 //
-//  Created by Emilie NOLBAS on 06/08/2025.
-//
 
 import Observation
 import Foundation
