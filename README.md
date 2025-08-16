@@ -43,4 +43,9 @@ cd TrackExpense
 open TrackExpense.xcodeproj
 ```
 ## Screenshots
+<p align="center">
+  <img src="iExpense/Screenshot-HomeView.png" alt="Aperçu de la page d'accueil" width="30%"/>&nbsp;&nbsp;
+  <img src="iExpense/Screenshot-AddView.png" alt="Aperçu de la page d'ajout des depenses" width="30%"/>&nbsp;&nbsp;
+  <img src="iExpense/Screenshot-ConfirmView.png" alt="Aperçu du popup de confirmation" width="30%"/>&nbsp;&nbsp;
+</p>
 
