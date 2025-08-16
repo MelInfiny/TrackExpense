@@ -44,9 +44,9 @@ open TrackExpense.xcodeproj
 ```
 ## Screenshots
 <p align="center">
-  <img src="iExpense/Screenshot-DefaultView.png" alt="Aperçu de la page d'accueil vide" width="25%"/>&nbsp;&nbsp;
-  <img src="iExpense/Screenshot-HomeView.png" alt="Aperçu de la page d'accueil" width="25%"/>&nbsp;&nbsp;
-  <img src="iExpense/Screenshot-AddView.png" alt="Aperçu de la page d'ajout des depenses" width="25%"/>&nbsp;&nbsp;
-  <img src="iExpense/Screenshot-ConfirmView.png" alt="Aperçu du popup de confirmation" width="25%"/>&nbsp;&nbsp;
+  <img src="iExpense/Screenshot-DefaultView.png" alt="Aperçu de la page d'accueil vide" width="20%"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="iExpense/Screenshot-HomeView.png" alt="Aperçu de la page d'accueil" width="20%"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="iExpense/Screenshot-AddView.png" alt="Aperçu de la page d'ajout des depenses" width="20%"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="iExpense/Screenshot-ConfirmView.png" alt="Aperçu du popup de confirmation" width="20%"/>&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
